@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="//cdn.rawgit.com/fdaciuk/iscpf/v1.0.6/dist/is-cpf.min.js"></script>
+  <script></script>
+</head>
+
+<body>
+  <script>
+    function isCpfbenchmark() {
+      const cpfs = ["221.772.450-95", "063.215.780.10", "337-090-500-06", "26826805006", 10902301098]
+      var benchmark = 0
+
+      for (let index = 0; index < 124; index++) {
+        for (let i = 0; i < 4; i++) {
+          const t0 = performance.now();
+          isCpf(cpfs[i])
+          const t1 = performance.now();
+          benchmark = (t1 - t0)
+        }
+      }
+
+      console.log("isCpfbenchmark " + benchmark)
+    }
+
+  </script>
+  <script>
+    function validateCpfbenchmark() {
+      const cpfs = ["221.772.450-95", "063.215.780.10", "337-090-500-06", "26826805006", 10902301098]
+      var benchmark = 0
+
+      for (let index = 0; index < 124; index++) {
+        for (let i = 0; i < 4; i++) {
+          const t0 = performance.now();
+          validateCpf(cpfs[i])
+          const t1 = performance.now();
+          benchmark = (t1 - t0)
+        }
+      }
+
+      console.log("validateCpfbenchmark " + benchmark)
+    }
+  </script>
+  <script>
+    isCpfbenchmark()
+    validateCpfbenchmark()
+  </script>
+</body>
+
+</html>

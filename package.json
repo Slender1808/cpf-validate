@@ -1,42 +1,20 @@
 {
   "name": "iscpf",
-  "version": "1.0.6",
-  "description": "Validate CPF Numbers (for NodeJS and browsers)",
-  "main": "dist/is-cpf.min.js",
+  "version": "1.0.7",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && gulp uglify",
-    "deploy": "gulp deploy",
-    "build:patch": "npm version patch && npm run deploy",
-    "build:minor": "npm version minor && npm run deploy",
-    "build:major": "npm version major && npm run deploy",
-    "pretest": "npm run build && gulp lint",
-    "test": "node test/is-cpf-test.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fdaciuk/iscpf.git"
+    "url": "git+https://github.com/Slender1808/iscpf.git"
   },
-  "keywords": [
-    "cpf",
-    "validate cpf"
-  ],
-  "author": "Fernando Daciuk - @fdaciuk",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fdaciuk/iscpf/issues"
+    "url": "https://github.com/Slender1808/iscpf/issues"
   },
-  "homepage": "https://github.com/fdaciuk/iscpf",
-  "standard": {
-    "ignore": [
-      "dist"
-    ]
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-header": "^1.7.1",
-    "gulp-standardize": "^1.1.0",
-    "gulp-uglify": "^1.5.3"
-  }
+  "homepage": "https://github.com/Slender1808/iscpf#readme"
 }
